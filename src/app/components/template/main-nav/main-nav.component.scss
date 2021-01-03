@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mat-toolbar {
+        height: 56px;
+        background: rgb(207, 162, 157);
+        position: relative;
+        z-index: 2;
+        .nav-buttons {
+            display: flex;
+            .navIcon {
+                margin-left: 15px;
+                margin-right: 10px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .hide {
+                display: none;
+            }
+        }
+    }
+    .mat-sidenav {
+        background: rgb(207, 162, 157);
+        .mat-nav-list {
+            padding: 0px;
+            a {
+                color: white;
+            }
+        }
+    }
+    .section-name-container {
+        width: 100%;
+        text-align: center;
+        margin-left: 44px;
+    }
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .logo {
+            width: 24px;
+            filter: invert(1);
+        }
+        .size_22 {
+            width: 22px;
+            padding-right: 20px;
+        }
+        .font-size_32 {
+            padding-top: 2px;
+            font-size: 32px !important;
+        }
+    }
+}
+
+.is-mobile .toolbar {
+    position: fixed;
+    z-index: 2;
+}
+
+.sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+    .size_24 {
+        width: 24px;
+        padding-right: 20px;
+    }
+}
+
+.is-mobile .sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    height: 100%;
+    .lastChild {
+        margin-top: auto;
+    }
+    .navIcon {
+        margin: 0 20px 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        .toolbar {
+            height: 45px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    mat-toolbar {
+        .nav-buttons {
+            display: none;
+        }
+    }
+}

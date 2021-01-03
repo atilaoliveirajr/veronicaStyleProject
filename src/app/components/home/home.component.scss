@@ -1,0 +1,58 @@
+.front-page {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../../assets/images/mockUpVeronica.png');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    .front-end-block-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        color: white;
+        text-shadow: 2px 1px black;
+        font-family: 'Taviraj', serif;
+        padding-left: 60px;
+    }
+    .front-end-block {
+        display: flex;
+        justify-content: left;
+        align-items: flex-end;
+        height: 70%;
+        text-align: left;
+        font-size: 70px;
+        line-height: 90px;
+        .headline {
+            font-weight: 600;
+            margin-bottom: 0px;
+        }
+        .fadeIn {
+            animation: fadeInAnimation 1.2s ease-in-out;
+        }
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+@media (max-width: 700px) {
+    .front-page {
+        .front-end-block {
+            margin-top: 50px;
+            font-size: 40px;
+            line-height: 50px;
+        }
+        .front-end-block-container {
+            padding-left: 20px;
+        }
+    }
+}

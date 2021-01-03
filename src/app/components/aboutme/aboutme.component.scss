@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(207, 175, 171);
+    .page-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+        .text-wrapper {
+            width: 400px;
+            height: fit-content;
+            margin: 30px;
+            margin-top: 50px;
+            p {
+                line-height: 1.875em;
+                font-size: 15px;
+                margin-bottom: 0px;
+                font-weight: lighter;
+                .bold {
+                    font-weight: 500;
+                }
+            }
+        }
+        .photo-wrapper {
+            margin: 30px;
+            margin-top: 60px;
+            .photo-container {
+                max-width: 400px;
+                max-height: 400px;
+                overflow: hidden;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px black;
+                .photo {
+                    background-image: url('../../../assets/images/mockUpVeronica.png');
+                    background-size: cover;
+                    background-position: center;
+                    transition: transform 3s;
+                    width: 400px;
+                    height: 400px;
+                    &:hover {
+                        transform: scale(1.1)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .page-wrapper {
+        .text-wrapper {
+            h1,
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        .page-wrapper {
+            .photo-wrapper {
+                margin-top: 30px;
+                margin-bottom: 0px;
+                .photo-container {
+                    max-width: 310px;
+                    max-height: 310px;
+                    .photo {
+                        max-width: 300px;
+                        max-height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
